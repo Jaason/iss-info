@@ -1,4 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.jaason.net [NC]
-RewriteRule ^(.*)$ http://jaason.net/$1 [L,R=301]
-ErrorDocument 404 http://jaason.net
