@@ -1,0 +1,43 @@
+/* Base Application Styles */
+$text-color: #ffd863;
+$main-background-color: #364859;
+$sec-background-color: #2f3e4c;
+$dark-background-color: #1b242c;
+$border-color: #27333f;
+$white: #fff;
+
+body {
+  color: $text-color;
+  background: $main-background-color;
+  font-family: 'Dosis', sans-serif;
+}
+
+.margin10 {
+  margin-top: 10px;
+}
+
+.panels {
+  margin: 2rem auto;
+}
+.panel {
+  background: $border-color !important;
+
+  &.panel-info {
+    border-color: $border-color;
+
+    .panel-heading {
+      background-color: $dark-background-color !important;
+      border-color: $border-color;
+      font-weight: 400;
+      font-size: 2rem;
+      color: $white;
+    }
+
+    .list-group-item {
+      background-color: $sec-background-color !important;
+      font-weight: 300;
+      border: 0;
+      border-top: 1px solid $border-color;
+    }
+  }
+}

@@ -8,7 +8,8 @@ ToDo:
 - [ ] Add upcoming passes over user location: http://open-notify.org/Open-Notify-API/ISS-Location-Now/
 - [ ] Add reverse geolocation
 - [ ] Add fetch tests
-- [ ] Add autoupdate component position for ex. 5s
+- [x] Add autoupdate component position for ex. 5s
+- [ ] Add ground track line
 
 Useful commands:
 ```
