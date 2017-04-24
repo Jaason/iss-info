@@ -1,15 +1,26 @@
 /* Base Application Styles */
-$text-color: #ffd863;
+$yellow: #ffd863;
 $main-background-color: #364859;
 $sec-background-color: #2f3e4c;
 $dark-background-color: #1b242c;
 $border-color: #27333f;
 $white: #fff;
 
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
-  color: $text-color;
+  color: $yellow;
   background: $main-background-color;
   font-family: 'Dosis', sans-serif;
+}
+
+.position {
+  width: 100%;
+  height: 100%;
 }
 
 .margin10 {
@@ -19,6 +30,20 @@ body {
 .panels {
   margin: 2rem auto;
 }
+
+.github {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid $yellow;
+  color: $white;
+  margin-bottom: 2rem;
+
+  &:hover {
+    background: $yellow;
+    text-decoration: none;
+  }
+}
+
 .panel {
   background: $border-color !important;
 

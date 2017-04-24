@@ -6,7 +6,7 @@ and display its position on Google Map.
 
 ToDo:
 - [ ] Add upcoming passes over user location: http://open-notify.org/Open-Notify-API/ISS-Location-Now/
-- [ ] Add reverse geolocation
+- [x] Add reverse geolocation
 - [ ] Add fetch tests
 - [x] Add autoupdate component position for ex. 5s
 - [ ] Add ground track line

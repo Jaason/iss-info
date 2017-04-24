@@ -17,6 +17,6 @@ describe('MapComponent', function() {
   });
 
   it('should have its component name as default className', function() {
-    expect(this.MapComponent.props.className).to.equal('map');
+    expect(this.MapComponent.props.className).to.equal('map-container');
   });
 });

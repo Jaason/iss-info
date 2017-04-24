@@ -35,10 +35,12 @@ export default class Map extends React.Component {
       lng: this.props.longitude
     };
     return (
-      <div className="map">
-        <GoogleMapReact defaultZoom={this.props.zoom} center={centerPos}>
-          <Icon lat={this.props.latitude} lng={this.props.longitude} text={this.props.title}/>
-        </GoogleMapReact>
+      <div className="map-container">
+        <div className="map">
+          <GoogleMapReact defaultZoom={this.props.zoom} center={centerPos}>
+            <Icon lat={this.props.latitude} lng={this.props.longitude} text={this.props.title}/>
+          </GoogleMapReact>
+        </div>
       </div>
     )
 

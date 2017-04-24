@@ -12,7 +12,6 @@ export default class IssData extends React.Component {
 
     let velocity_kmh = Math.round(this.props.velocity);
     let velocity_ms = Math.round(velocity_kmh / 3.6);
-    let velocity_mph = Math.round(velocity_kmh * 0.62137119223733);
     let altitude = Math.round(this.props.altitude);
     let dmsCoords = ddToDms(this.props.latitude, this.props.longitude);
     return (
@@ -27,45 +26,37 @@ export default class IssData extends React.Component {
         </p>
         <div className="panels">
           <div className="row">
-            <div className="col-xs-3">
+            <div className="col-xs-12">
               <div className="panel panel-default panel-info">
-                <div className="panel-heading">Orbital speed</div>
+                <div className="panel-heading">Orbital information</div>
                 <ul className="list-group">
-                  <li className="list-group-item">{velocity_kmh}&nbsp;km/h</li>
-                  <li className="list-group-item">{velocity_ms}&nbsp;m/s</li>
-                  <li className="list-group-item">{velocity_mph}&nbsp;mph</li>
+                  <li className="list-group-item">
+                    <strong>Speed</strong>
+                    <span className="pull-right">{velocity_kmh}&nbsp;km/h ({velocity_ms}&nbsp;m/s)</span>
+                  </li>
+                  <li className="list-group-item">
+                    <strong>Altitude</strong>
+                    <span className="pull-right">{altitude}&nbsp;km</span>
+                  </li>
                 </ul>
               </div>
             </div>
-            <div className="col-xs-3">
+            <div className="col-xs-12">
               <div className="panel panel-default panel-info">
                 <div className="panel-heading">Ground point</div>
                 <ul className="list-group">
-                  <li className="list-group-item">Longitude: {this.props.longitude}</li>
-                  <li className="list-group-item">Latitude: {this.props.latitude}</li>
-                  <li className="list-group-item">&nbsp;{dmsCoords}</li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-xs-3">
-              <div className="panel panel-default panel-info">
-                <div className="panel-heading">Other information</div>
-                <ul className="list-group">
                   <li className="list-group-item">
-                    Altitude: {altitude}&nbsp;km
+                    <strong>Latitude/Longitude</strong>
+                    <span className="pull-right">{this.props.latitude},{this.props.longitude}</span>
                   </li>
-                  <li className="list-group-item">&nbsp;</li>
-                  <li className="list-group-item">&nbsp;</li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-xs-3">
-              <div className="panel panel-default panel-info">
-                <div className="panel-heading">&nbsp;</div>
-                <ul className="list-group">
-                  <li className="list-group-item">&nbsp;</li>
-                  <li className="list-group-item">&nbsp;</li>
-                  <li className="list-group-item">&nbsp;</li>
+                  <li className="list-group-item">
+                    <strong>Coordinates</strong>
+                    <span className="pull-right">{dmsCoords}</span>
+                  </li>
+                  <li className="list-group-item">
+                    <strong>Address</strong>
+                    <span className="pull-right">{this.props.address}</span>
+                  </li>
                 </ul>
               </div>
             </div>
